@@ -1,0 +1,690 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #12222d;
+  height: 1000px;
+}
+
+.wrapper {
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+.wrapper.active {
+  left: -400px;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  transition: 0.5s;
+}
+
+header.sticky {
+  padding: 20px 100px;
+  background: #162c3b;
+}
+
+header .logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header .toggle {
+  position: relative;
+  width: 36px;
+  height: 28px;
+  background: url("./img/toggle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+header .toggle.active {
+  background: url("./img/close.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3475ca;
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 0.25;
+}
+
+.banner .content {
+  position: relative;
+  max-width: 750px;
+  text-align: center;
+}
+.banner .content h2 {
+  font-size: 60px;
+  color: #fff;
+}
+.banner .content p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background: #12222d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: 0.5s;
+}
+.sidebar.active {
+  right: 0;
+}
+.sidebar ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar ul li {
+  list-style: none;
+  margin: 5px 0;
+}
+.sidebar ul li a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.sidebar ul li a:hover {
+  color: #3f8ffc;
+}
+.about {
+  position: relative;
+  width: 100%;
+  background: #162c3b;
+  display: flex;
+}
+
+.about .contentBx {
+  background: #162c3b;
+  padding: 100px;
+  width: 50%;
+}
+.heading {
+  position: relative;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.text {
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.text p {
+  margin-bottom: 1em;
+}
+
+.about .imgBx {
+  position: relative;
+  width: 50%;
+  background: url("./img/window.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.services {
+  position: relative;
+  background: #12222d;
+  text-align: center;
+  padding: 100px;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.container .serviceBx {
+  position: relative;
+  background: #fff;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.container .serviceBx img {
+  max-width: 100px;
+}
+.container .serviceBx h2 {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.technology {
+  position: relative;
+  background: #3f8ffc;
+  width: 100%;
+  padding: 100px;
+  padding-top: 300px;
+  margin-top: -300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.technology .contentBx {
+  position: relative;
+  max-width: 800px;
+}
+.technology .imgBx {
+  position: relative;
+  max-width: 250px;
+}
+.technology .imgBx img {
+  max-width: 100%;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+.client {
+  position: relative;
+  padding: 100px;
+  background: #162c3b;
+  text-align: center;
+}
+.client .imgBx {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.client .imgBx img {
+  display: inline-block;
+  position: relative;
+  max-width: 200px;
+  margin: 20px;
+  opacity: 0.25;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.client .imgBx img:hover {
+  opacity: 1;
+}
+.testimonials {
+  position: relative;
+  padding: 100px;
+  background: #12222d;
+  text-align: center;
+}
+.testimonials .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  flex-wrap: wrap;
+}
+.testimonials .container .contentBx {
+  position: relative;
+  background: #fff;
+  padding: 60px 50px;
+  margin: 10px;
+  width: 540px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials .container .contentBx p {
+  font-style: italic;
+}
+.testimonials .container .contentBx h3 {
+  width: 100%;
+  text-align: right;
+  font-weight: 500;
+  color: #3f8ffc;
+}
+
+.team {
+  position: relative;
+  padding: 0 100px 100px;
+  text-align: center;
+}
+.team .container {
+  margin-top: 30px;
+}
+.team .teamBx {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+}
+.team .teamBx .box {
+  margin: 0 10px;
+  width: 260px;
+  padding: 5px;
+  background: #fff;
+}
+.team .teamBx .box .imgBx {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.team .teamBx .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.team .teamBx .box .content {
+  padding: 15px 0;
+}
+.team .teamBx .box .content h2 {
+  position: relative;
+  font-size: 18px;
+  line-height: 1em;
+}
+.team .teamBx .box .content h2 span {
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.contact {
+  position: relative;
+  padding: 100px;
+  text-align: center;
+  background: #162c3b;
+}
+.about .imgBx2 {
+  position: relative;
+  width: 50%;
+  background: url("./img/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.redBg {
+  background: url("./img/red.jpg") !important;
+  background-size: cover;
+  background-position: center;
+}
+
+.form {
+  position: relative;
+}
+
+.form .inputBx {
+  margin-bottom: 40px;
+}
+.form .inputBx input {
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder,
+.form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder,
+.form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder,
+.form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder,
+.form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-webkit-input-placeholder, .form .inputBx textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-moz-placeholder, .form .inputBx textarea::-moz-placeholder {
+  color: #fff;
+}
+.form .inputBx input:-ms-input-placeholder, .form .inputBx textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::-ms-input-placeholder, .form .inputBx textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.form .inputBx input::placeholder,
+.form .inputBx textarea::placeholder {
+  color: #fff;
+}
+.form .inputBx textarea {
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  min-height: 150px;
+  border-bottom: 2px solid #fff;
+  resize: none;
+}
+
+.form .inputBx input[type="submit"] {
+  width: 150px;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.footer {
+  position: relative;
+  background: #162c3b;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer ul li {
+  list-style: none;
+}
+.footer ul li a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+.footer ul li a img {
+  max-width: 20px;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+.footer .text p {
+  margin-bottom: 0;
+}
