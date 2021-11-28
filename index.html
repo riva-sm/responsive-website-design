@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Website | Design from Scratch</title>
+  <link rel="stylesheet" href="sal.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -31,7 +32,7 @@
     <!-- banner -->
     <div class="banner" id="home">
       <img src="img/bg.jpg" alt="">
-      <div class="content">
+      <div class="content" data-sal="slide-left" data-sal-duration="500">
         <h2>Sucess By Design</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur et, a nobis corporis id excepturi error
           blanditiis quisquam consectetur architecto sint reiciendis necessitatibus aliquid totam soluta repudiandae
@@ -40,7 +41,7 @@
     </div>
     <!-- about -->
     <section class="about" id="about">
-      <div class="contentBx">
+      <div class="contentBx" data-sal="slide-right" data-sal-duration="500">
         <h2 class="heading">About Us</h2>
         <div class="text">
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur laudantium sunt, doloremque harum,
@@ -55,12 +56,12 @@
             eum?</p>
         </div>
       </div>
-      <div class="imgBx"></div>
+      <div class="imgBx" data-sal="slide-left" data-sal-duration="500"></div>
     </section>
     <!-- services -->
     <section class="services" id="services">
-      <h2 class="heading">Our Services</h2>
-      <div class="text">
+      <h2 class="heading" data-sal="slide-right" data-sal-duration="500">Our Services</h2>
+      <div class="text" data-sal="slide-left" data-sal-duration="500">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam et ut iste exercitationem reprehenderit
           eos
           dignissimos maxime sed corporis vel odio obcaecati voluptate asperiores, perspiciatis sunt tempore ad
@@ -70,18 +71,18 @@
           possimus!</p>
       </div>
       <div class="container">
-        <div class="serviceBx">
+        <div class="serviceBx" data-sal="slide-right" data-sal-duration="500">
           <div>
             <img src="img/icon1.png" alt="Design">
             <h2>Design</h2>
           </div>
         </div>
-        <div class="serviceBx">
+        <div class="serviceBx" data-sal="slide-up" data-sal-duration="500">
           <div><img src="img/icon2.png" alt="Development">
             <h2>Development</h2>
           </div>
         </div>
-        <div class="serviceBx">
+        <div class="serviceBx" data-sal="slide-left" data-sal-duration="500">
           <div>
             <img src="img/icon3.png" alt="Branding">
             <h2>Branding</h2>
@@ -91,7 +92,7 @@
     </section>
     <!-- technologies -->
     <section class="technology">
-      <div class="contentBx">
+      <div class="contentBx" data-sal="slide-right" data-sal-duration="500">
         <h2 class="heading">We use cutting edge technology</h2>
         <div class="text">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aspernatur quidem dolores, laborum
@@ -99,14 +100,14 @@
             odio velit et. Doloribus, eum animi?</p>
         </div>
       </div>
-      <div class="imgBx">
+      <div class="imgBx" data-sal="slide-left" data-sal-duration="500">
         <img src="img/tech.png">
       </div>
     </section>
     <!-- clients -->
     <section class="client" id="client">
-      <h2 class="heading">Our Clients</h2>
-      <div class="text">
+      <h2 class="heading" data-sal="slide-right" data-sal-duration="500">Our Clients</h2>
+      <div class="text" data-sal="slide-left" data-sal-duration="500">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id minus eos consequuntur earum consectetur dolor,
           assumenda ipsum. Quo nemo distinctio exercitationem, commodi tempore numquam. Voluptatem doloremque possimus
           debitis nemo sint.
@@ -125,7 +126,7 @@
     <section class="testimonials" id="testimonials">
       <h2 class="heading">What our client says</h2>
       <div class="container">
-        <div class="contentBx">
+        <div class="contentBx" data-sal="slide-right" data-sal-duration="500">
           <div>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur nostrum a minima velit at adipisci
               obcaecati. Debitis nostrum cumque iste ullam sequi delectus sapiente magni, maiores suscipit ut alias
@@ -134,7 +135,7 @@
             </h3>
           </div>
         </div>
-        <div class="contentBx">
+        <div class="contentBx" data-sal="slide-left" data-sal-duration="500">
           <div>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur nostrum a minima velit at adipisci
               obcaecati. Debitis nostrum cumque iste ullam sequi delectus sapiente magni, maiores suscipit ut alias
@@ -147,8 +148,8 @@
     </section>
     <!-- team -->
     <section class="team" id="team">
-      <h2 class="heading">Our Team</h2>
-      <div class="text">
+      <h2 class="heading" data-sal="slide-right" data-sal-duration="500">Our Team</h2>
+      <div class="text" data-sal="slide-left" data-sal-duration="500">
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam blanditiis facere expedita quod rerum
           veniam illum, nemo laboriosam magnam quibusdam maxime perferendis. Explicabo sequi necessitatibus odio, dicta
           quaerat doloremque quo!
@@ -201,8 +202,8 @@
     </section>
     <!-- contact -->
     <section class="contact">
-      <h2 class="heading">Contact Us</h2>
-      <div class="text">
+      <h2 class="heading" data-sal="slide-right" data-sal-duration="500">Contact Us</h2>
+      <div class="text" data-sal="slide-left" data-sal-duration="500">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores velit nulla quae consequatur ut ducimus, id
           perspiciatis laborum deleniti magnam libero quia nam, eligendi, alias vero dolore officiis consequuntur? Qui!
           Ab voluptates accusamus ea ad sequi minus, voluptatem deleniti veritatis nesciunt odio aperiam molestiae
@@ -211,7 +212,7 @@
       </div>
     </section>
     <section class="about" id="contact">
-      <div class="contentBx redBg">
+      <div class="contentBx redBg" data-sal="slide-right" data-sal-duration="500">
         <div class="form">
           <div class="inputBx">
             <input type="text" name="" placeholder="Full Name">
@@ -248,7 +249,13 @@
     </section>
   </div>
 
+  <script src="sal.js"></script>
   <script>
+
+    sal({
+      once: false,
+    });
+
     function toggleClassName() {
       let sidebar = document.querySelector(".sidebar");
       let wrapper = document.querySelector(".wrapper");
